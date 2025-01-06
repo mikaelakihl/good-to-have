@@ -1,10 +1,10 @@
-# How to set up Vite project
+# :tada: How to set up Vite project :tada:
 
-## Github
+## :wrench: Github
 - [ ] Create repo in Github
 - [ ] >Git clone repo in VS code
 
-## Install Vite and TypeScript
+## :zap: Install Vite and TypeScript
 
 - [ ] Install npm in Terminal
  ```bash
@@ -25,13 +25,13 @@ In terminal
   npm run dev
 ```
 
-## Fix gitignore
+## :see_no_evil: Fix gitignore
 ### Make sure these exist in .gitignore file
 - [ ] .DS_Store
 - [ ] *.css.map
 - [ ] style.css
 
-## Add vite.config.ts
+## :zap: Add vite.config.ts
 ```bash
   touch vite.config.ts
 ```
@@ -43,7 +43,7 @@ export default defineConfig({
   'base': '/adressen-till-ert-repo-här/'
 });
 ```
-## Install EsLint
+## :sparkles: Install EsLint
 ```bash
   npm init @eslint/config@latest
 ```
@@ -60,7 +60,7 @@ eslint, globals, @eslint/js, typescript-eslint
 ✔ Would you like to install them now? · Yes
 ✔ Which package manager do you want to use? · npm
 ```
-## Install Prettier
+## :art: Install Prettier
 ```bash
 # Install Prettier med npm 
 npm install --save-dev --save-exact prettier
@@ -77,7 +77,7 @@ npx prettier . --write
 npm install --save-dev eslint-config-prettier
 
 ```
-## Add these 2 lines in eslint.config.js file
+## :sparkles: Add these 2 lines in eslint.config.js file
 ```bash
 import globals from "globals";
 import pluginJs from "@eslint/js";
@@ -101,7 +101,7 @@ export default [
   eslintConfigPrettier // THIS LINE 
 ];
 ```
-## Install Sass
+## :lipstick: Install Sass
 ```bash
 npm install --save-dev sass
 ```
@@ -110,7 +110,7 @@ npm install --save-dev sass
 ```bash
 import 'style.scss'; // or what map its in
 ```
-## Set up in GitHub Pages
+## :wrench: Set up in GitHub Pages
 - [ ] Go to repo
 - [ ] Click on settings
 - [ ] Click on Pages
