@@ -10,7 +10,10 @@
  ```bash
   npm create vite@latest .
 ```
-Choose Vanilla -> TypeScript
+```bash
+✔ Select a framework: › Vanilla
+✔ Select a variant: › TypeScript
+```
   
 In terminal
 
@@ -73,5 +76,38 @@ npx prettier . --write
 # Install eslint-config-prettier to make Prettier and ESLint work together:
 npm install --save-dev eslint-config-prettier
 
+```
+## Add these 2 lines in eslint.config.js file
+```bash
+import globals from "globals";
+import pluginJs from "@eslint/js";
+import tseslint from "typescript-eslint";
+import eslintConfigPrettier from "eslint-config-prettier";  // THIS LINE
+
+/** @type {import('eslint').Linter.Config[]} */
+export default [
+  {files: ["**/*.{js,mjs,cjs,ts}"]},
+  {
+    languageOptions: { globals: globals.browser },
+    rules: {
+      camelcase: "error",
+      'comma-dangle': ['error', 'always-multiline'], // Enforce trailing commas in multiline
+      'curly': ['error', 'all'], // Require curly braces for all control statements
+      'no-console': 'warn', // Warn about console.log usage
+    },
+  },
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
+  eslintConfigPrettier // THIS LINE 
+];
+```
+## Install Sass
+```bash
+npm install --save-dev sass
+```
+### Create style.css
+### Link in main.ts file
+```bash
+import 'style.scss'; // or what map its in
 ```
 
