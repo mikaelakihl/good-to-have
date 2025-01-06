@@ -27,3 +27,16 @@ In terminal
 - [ ] .DS_Store
 - [ ] *.css.map
 - [ ] style.css
+
+## Add vite.config.ts
+```bash
+  touch vite.config.ts
+```
+### Add this in the file 
+```bash
+  import { defineConfig } from 'vite';
+
+export default defineConfig({
+  'base': '/adressen-till-ert-repo-här/'
+});
+```
