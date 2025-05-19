@@ -1,0 +1,6 @@
+## This file should be added when deploying to Vercel (Client). Don't change file name. 
+
+{
+  "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }]
+}
+
